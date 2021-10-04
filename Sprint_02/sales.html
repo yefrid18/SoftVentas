@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Administracion de Ventas</title>
+	<link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/material.min.js" ></script>
+	<script src="js/main.js" ></script>
+</head>
+<body>
+	<!-- navBar -->
+	<div class="full-width navBar">
+		<div class="full-width navBar-options">
+			<i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>	
+			<div class="mdl-tooltip" for="btn-menu">Menu</div>
+			<nav class="navBar-options-list">
+				<ul class="list-unstyle">
+					<li class="btn-exit" id="btn-exit">
+						<i class="zmdi zmdi-power"></i>
+						<div class="mdl-tooltip" for="btn-exit">Salir</div>
+					</li>
+					<li class="text-condensedLight noLink" ><small>Andres Gutierrez Quintero</small></li>
+					<li class="noLink">
+						<figure>
+							<img src="assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
+						</figure>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- navLateral -->
+	<section class="full-width navLateral">
+		<div class="full-width navLateral-bg btn-menu"></div>
+		<div class="full-width navLateral-body">
+			<div class="full-width navLateral-body-logo text-center tittles">
+				<i class="zmdi zmdi-close btn-menu"></i> Gestión 
+			</div>
+			<figure class="full-width" style="height: 77px;">
+				<div class="navLateral-body-cl">
+					<img src="assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
+				</div>
+				<figcaption class="navLateral-body-cr hide-on-tablet">
+					<span>
+						Andres Gutierrez Quintero<br>
+						<small>Administrador</small>
+					</span>
+				</figcaption>
+			</figure>
+			<div class="full-width tittles navLateral-body-tittle-menu">
+				<i class="zmdi zmdi-desktop-mac"></i><span class="hide-on-tablet">&nbsp; Opciones</span>
+			</div>
+			<nav class="full-width">
+				<ul class="full-width list-unstyle menu-principal">
+					<li class="full-width">
+						<a href="home.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-view-dashboard"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Inicio
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="users.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-face"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Usuarios
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="products.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-washing-machine"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Administracion de Productos
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="sales.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-shopping-cart"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Administracion de Ventas
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<!-- pageContent -->
+	<section class="full-width pageContent">
+		<section class="full-width header-well">
+			<div class="full-width header-well-icon">
+				<i class="zmdi zmdi-shopping-cart"></i>
+			</div>
+			<div class="full-width header-well-text">
+				<p class="text-condensedLight">
+					Gestión de Ventas
+				</p>
+			</div>
+		</section>
+		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+			<div class="mdl-tabs__tab-bar">
+				<a href="#tabNewProduct" class="mdl-tabs__tab is-active">Registrar Venta</a>
+				<a href="#tabListProducts" class="mdl-tabs__tab">Listar</a>
+			</div>
+			<div class="mdl-tabs__panel is-active" id="tabNewProduct">
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+						<div class="full-width panel mdl-shadow--2dp">
+							<div class="full-width panel-tittle bg-primary text-center tittles">
+								Nueva Venta
+							</div>
+							<div class="full-width panel-content">
+								<form id="sales-form">
+									<div class="mdl-grid">
+										<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
+											<h5 class="text-condensedLight">Información del cliente</h5>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="Nombre">
+												<label class="mdl-textfield__label" for="Nombre">Nombres y apellidos</label>
+											</div>
+											<h5 class="text-condensedLight">Cantidades y Precio</h5>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="Unidades">
+												<label class="mdl-textfield__label" for="Unidades">Unidades</label>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text" pattern="-?[0-9.]*(\.[0-9]+)?" id="Precio">
+												<label class="mdl-textfield__label" for="Precio">Precio</label>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="Descuento">
+												<label class="mdl-textfield__label" for="Descuento">% Descuento</label>
+											</div>
+										</div>
+										<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
+											<h5 class="text-condensedLight">-</h5>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="Documento">
+												<label class="mdl-textfield__label" for="Documento">Documento de Identidad</label>
+											</div>
+											<h5 class="text-condensedLight">Seleccione del producto</h5>
+											<div class="mdl-textfield mdl-js-textfield">
+												<select class="mdl-textfield__input">
+													<option value="" disabled="" selected="">Seleccione categoría</option>
+													<option value="">Computadores</option>
+													<option value="">Smartphones</option>
+													<option value="">Tablets</option>
+												</select>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield">
+												<select class="mdl-textfield__input">
+													<option value="" disabled="" selected="">Seleccione el producto</option>
+													<option value="">Laptop Huawei MateBook</option>
+													<option value="">Laptop Lenovo IdeaPad</option>
+													<option value="">Computador HP 240 G7</option>
+													<option value="">Portátil Asus M415</option>
+													<option value="">Portátil Asus X409MA</option>
+													<option value="">Apple Macbook Pro 13</option>
+													<option value="">Celular Xiaomi POCO X3 Pro 128GB</option>
+													<option value="">Celular Motorola Moto G9 Plus</option>
+													<option value="">Celular Huawei P30</option>
+													<option value="">Celular Samsung S20+</option>
+													<option value="">Celular Iphone 12</option>
+													<option value="">iPad Pro 11''</option>
+													<option value="">Tablet Lenovo 10''</option>
+													<option value="">Tablet Samsung 10.4''</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<p class="text-center">
+										<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary" id="btn-addProduct", onclick="regSale();">
+											<i class="zmdi zmdi-plus"></i>
+										</button>
+										<div class="mdl-tooltip" for="btn-regSale">Registrar Venta</div>
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mdl-tabs__panel" id="tabListProducts">
+				<form>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
+							<h5 class="text-condensedLight">Buscar por: </h5>
+							<div class="mdl-textfield mdl-js-textfield">
+								<select class="mdl-textfield__input">
+									<option value="" disabled="" selected="">Seleccione la opción de búsqueda</option>
+									<option value="">ID Venta</option>
+									<option value="">Documento del cliente</option>
+									<option value="">Nombre del cliente</option>
+								</select>
+							</div>
+						</div>
+						<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
+							<h5 class="text-condensedLight">-</h5>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="Documento">
+								<label class="mdl-textfield__label" for="Buscar">Ingrese el texto</label>
+							</div>
+						</div>
+					</div>
+					<p class="text-center">
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btn-addProduct">
+							<i class="zmdi zmdi-search-for"></i>
+						</button>
+						<div class="mdl-tooltip" for="btn-addProduct">Listar</div>
+					</p>
+				</form>
+				<div class="full-width divider-menu-h"></div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+						<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive" id="table-sales">
+							<thead>
+								<tr>
+									<th>ID Venta</th>
+									<th>Nombre del cliente</th>
+									<th>Documento del cliente</th>
+									<th>Valor total</th>
+									<th>Opciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>800017</td>
+									<td>Christian Andrés Gutiérrez Quintero</td>
+									<td>1152198885</td>
+									<td>$ 2.858.927</td>
+									<td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+								</tr>
+								<tr>
+									<td>800018</td>
+									<td>Yefrid Morelo Marzola</td>
+									<td>1027953966</td>
+									<td>$ 3.541.674</td>
+									<td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+								</tr>
+								<tr>
+									<td>800019</td>
+									<td>Heidy Mishell Montero</td>
+									<td>1001286423</td>
+									<td>$ 3.284.321</td>
+									<td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+								</tr>
+								<tr>
+									<td>800020</td>
+									<td>Julian Padilla Chiquillo</td>
+									<td>1038818308</td>
+									<td>$ 2.714.203</td>
+									<td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
